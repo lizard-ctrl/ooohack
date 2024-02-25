@@ -20,6 +20,14 @@ function setup() {
       slider = createSlider(0, 100);
       slider.position(10, 10);
       slider.size(80);
+
+      slider1 = createSlider(0, 100);
+      slider1.position(10, 40);
+      slider1.size(80);
+
+      slider2 = createSlider(0, 100);
+      slider2.position(10, 80);
+      slider2.size(80);
     
 
   createCanvas(96, 96);
@@ -58,6 +66,9 @@ function draw() {
     blobs[i].update();
   }
   let g = slider.value();
+  let b = slider1.value();
+  let c = slider1.value();
+  
   let dryWet = constrain(map(g, 0, width, 0, 1), 0, 1);
   // 1 = all reverb, 0 = no reverb
   reverb.drywet(dryWet);
